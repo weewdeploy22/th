@@ -53,6 +53,7 @@ async function main() {
 
     while (!hasErr) {
         console.log('numConn: ', numConn);
+        console.time('allConn');
         for (let i = 0; i < numConn; i++) {
             cons.push(
                 oneFetch('some param')
@@ -78,6 +79,8 @@ async function main() {
         const sleepTimeMs = 2;
         await new Promise(r => setTimeout(r, sleepTimeMs));
 
+        console.timeEnd('allConn');
+        
         // double--numConn
         numConn = numConn + ((numConn / 2) | 0)
     }
