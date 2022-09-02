@@ -225,21 +225,23 @@ const taskUpdating_refreshing = async function (currentTimeSec) {
 
 
     // TODO: refresh 5s-list
-    if (
-        (currentTimeSec % 5) == 4
-        // currentTimeSec == 0 + (60 - 1) ||
-        // currentTimeSec == 30
-    ) {
-        // refresh 5s-list 
-        // refreshTasks_fromTodo_5s()
+    // if (
+    //     (currentTimeSec % 5) == 4
+    //     // currentTimeSec == 0 + (60 - 1) ||
+    //     // currentTimeSec == 30
+    // ) {
+    //     // refresh 5s-list 
+    //     // refreshTasks_fromTodo_5s()
+    // // }
 
         // TODO: refresh 30s-list
+        if (
+            (currentTimeSec % 30) == 29
+            // currentTimeSec == 0 + (60 - 1) ||
+            // currentTimeSec == 30
+        ) {
         refreshTasks_fromTodo_30s()
-        // if (
-        //     (currentTimeSec % 30) == 29
-        //     // currentTimeSec == 0 + (60 - 1) ||
-        //     // currentTimeSec == 30
-        // ) {
+
         // // refresh 30s-list 
         // for (let i = 0; i < todoTasks[1].tasks.length; i++) {
         //     const task = todoTasks[1].tasks[i];
