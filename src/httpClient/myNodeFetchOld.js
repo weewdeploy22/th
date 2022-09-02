@@ -236,7 +236,9 @@ const taskUpdating_refreshing = async function (currentTimeSec) {
 
         // TODO: refresh 30s-list
         if (
-            (currentTimeSec % 30) == 29
+            // (currentTimeSec % 30) == 29
+            // DEBUG: 30s ->1m
+            currentTimeSec  == 59
             // currentTimeSec == 0 + (60 - 1) ||
             // currentTimeSec == 30
         ) {
@@ -444,7 +446,7 @@ const saveData_toLowDB = async function (results, time_save_at) {
     // NOTE: increment - filename_id
     filename_id++;
     console.log('save_lowDB ->filename_id: ', filename_id);
-    console.log('data: ', results);
+    // console.log('data: ', results);
     const copyResults = JSON.parse(JSON.stringify(results));
     // const newResults = JSON.parse(JSON.stringify(original));
 
