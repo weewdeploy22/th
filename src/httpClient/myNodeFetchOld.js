@@ -516,8 +516,9 @@ export async function main(
     doingTasks.push(taskUpdating());
 
     // conn
-    const numConn = 2;
+    // const numConn = 2;
     // const numConn = 20;
+    const numConn = 50;
     for (let i = 0; i < numConn; i++) {
         doingTasks.push(
             poolConn({ conn_i: i, options, url, key, })
