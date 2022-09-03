@@ -1,4 +1,12 @@
 
+// https://stackoverflow.com/a/66309132
+import path from 'path';
+import { fileURLToPath } from 'url'
+
+const nodePath = path.resolve(process.argv[1]);
+const modulePath = path.resolve(fileURLToPath(import.meta.url))
+const isRunningDirectlyViaCLI = nodePath === modulePath
+
 // const URL = 'https://wen043.settrade.com/webrealtime/data/fastquote.jsp';
 const URL = 'https://pokeapi.co/api/v2/pokemon/1';
 
@@ -25,7 +33,8 @@ const OPTIONS = {
 
 const oneFetch = async function (someParams) {
     let hasErr = false;
-    for (let i = 0; i < 2; i++) {
+    // for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 12; i++) {
         const res = await fetch(URL).catch(function (err) {
             hasErr = true;
 
@@ -51,6 +60,8 @@ async function main() {
     let numConn = 5;
     let hasErr = false;
 
+    const timeBenchLimit = 2 * 1000; //ms
+
     while (!hasErr) {
         console.log('numConn: ', numConn);
         console.time('allConn');
@@ -59,33 +70,53 @@ async function main() {
                 oneFetch('some param')
             )
         }
+        // --time-start
+        const timeStart = Date.now();
         const results = await Promise.all(cons)
             .catch(function (err) {
                 console.log('err::: -------------------');
                 console.error(err);
             });
 
-        // console.log('results::: ', results);
+        // check-err http
         for (let i = 0; i < results.length; i++) {
             const resultErr = results[i];
-            // hasErr = true;
-            hasErr = resultErr;
-            if (hasErr) {
+            local_hasErr = resultErr;
+            if (local_hasErr) {
+                hasErr = true;
                 console.log(`err-on: -- [numConn=${numConn}, i=${i}] -- `);
                 break;
             }
         }
 
-        const sleepTimeMs = 2;
+        // --time-stop
+        const timeStop = Date.now();
+        const timeUsed = timeStop - timeStart; 
+        // check-err long-time
+        if (timeUsed > timeBenchLimit) {
+            hasErr = true;
+            console.log('err::: outOfTime - timeUsed: ', timeUsed);
+            console.log(`err-on: -- [numConn=${numConn}, i=${i}] -- `); 
+            break;
+        }
+
+        const sleepTimeMs = 10;
         await new Promise(r => setTimeout(r, sleepTimeMs));
 
         console.timeEnd('allConn');
-        
-        // double--numConn
+
+        // double(x + 0.5)--numConn
         numConn = numConn + ((numConn / 2) | 0)
     }
 }
 
-main()
+// main()
+console.log('isRunningDirectlyViaCLI: ', isRunningDirectlyViaCLI);
+if (isRunningDirectlyViaCLI) {
+    console.log('console-starting: -- ');
+    main();
+    console.log('console-ended: -- ');
+}
+
 
 export { oneFetch }
