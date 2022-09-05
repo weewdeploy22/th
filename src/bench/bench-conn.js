@@ -9,8 +9,8 @@ const nodePath = path.resolve(process.argv[1]);
 const modulePath = path.resolve(fileURLToPath(import.meta.url))
 const isRunningDirectlyViaCLI = nodePath === modulePath
 
-// const URL = 'https://wen043.settrade.com/webrealtime/data/fastquote.jsp';
-const URL = 'https://pokeapi.co/api/v2/pokemon/1';
+const URL = 'https://wen043.settrade.com/webrealtime/data/fastquote.jsp';
+// const URL = 'https://pokeapi.co/api/v2/pokemon/1';
 
 const OPTIONS = {
 
@@ -37,28 +37,34 @@ const oneFetch = async function (someParams) {
     let hasErr = false;
     for (let i = 0; i < 2; i++) {
         // for (let i = 0; i < 12; i++) {
-        try {
-            const res = await got(URL, { "method": "GET" });
-            if (res.ok) {
-                const body = res.body;
-            } else {
-                hasErr = true;
-            }
-        } catch (error) {
-            // console.error(error)
-            console.log('--catch--')
+        // try {
+        //     const res = await got(URL, { "method": "GET" });
+        //     if (res.ok) {
+        //         const body = res.body;
+        //     } else {
+        //         hasErr = true;
+        //     }
+        // } catch (error) {
+        //     // console.error(error)
+        //     console.log('--catch--')
 
-            hasErr = true;
-        }
-
-        // const res = await fetch(URL).catch(function (err) {
-        // if (res === false) {
         //     hasErr = true;
-        // } else {
-        //     // const hasData = await res.text();
-        //     const hasData = await res.body();
-        //     // console.log(hasData);
         // }
+
+        const res = await fetch(URL)
+            .catch(function (err) {
+                hasErr = true;
+
+                return false;
+            });
+
+        if (res === false) {
+            hasErr = true;
+        } else {
+            const hasData = await res.text();
+            // const hasData = await res.body();
+            // console.log(hasData);
+        }
 
     }
 
