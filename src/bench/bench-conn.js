@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url'
 
 import got from 'got';
+import fetch from 'node-fetch';
 
 const nodePath = path.resolve(process.argv[1]);
 const modulePath = path.resolve(fileURLToPath(import.meta.url))
