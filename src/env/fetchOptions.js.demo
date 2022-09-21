@@ -14,7 +14,7 @@ const options =
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest",
 
-        "cookie": "VarXXX",
+        // "cookie": "VarXXX",
 
         "Referer": "https://wen043.settrade.com/realtime/fastorder/fastorder.jsp?platform=mm&frameHeight=60",
         "Referrer-Policy": "strict-origin-when-cross-origin"
