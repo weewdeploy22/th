@@ -8,10 +8,12 @@ const nodePath = path.resolve(process.argv[1]);
 const modulePath = path.resolve(fileURLToPath(import.meta.url))
 const isRunningDirectlyViaCLI = nodePath === modulePath
 
-const URL = 'https://wen043.settrade.com/webrealtime/data/fastquote.jsp';
+// const URL = 'https://wen043.settrade.com/webrealtime/data/fastquote.jsp';
 // const URL = 'https://pokeapi.co/api/v2/pokemon/1';
 
-const popSymbol = 'SCB';
+const GLOBAL_URL = fetchOptions.url;
+
+const popSymbol = 'PTT';
 const OPTIONS = {
     headers: fetchOptions.options.headers,
     method: fetchOptions.options.method,
@@ -21,7 +23,7 @@ const OPTIONS = {
 const oneFetch = async function (someParams) {
     let hasErr = false;
 
-    const res = await fetch(URL, OPTIONS).catch(function (err) {
+    const res = await fetch(GLOBAL_URL, OPTIONS).catch(function (err) {
         console.error(err);
         // check-err http
         console.log('err::: http');
@@ -33,6 +35,7 @@ const oneFetch = async function (someParams) {
         hasErr = true;
     } else {
         const hasData = await res.json();
+        // console.log(hasData);
         if (typeof hasData.symbol == 'undefined') {
             console.log('err::: permission');
 
