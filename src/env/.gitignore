@@ -2,3 +2,7 @@ _xxx*.js
 fetchOptions*.js
 
 constData.js
+
+# all.bak202209-*.js
+all.bak202210-*.js
+all.bak202211-*.js

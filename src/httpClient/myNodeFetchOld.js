@@ -18,6 +18,7 @@ import libFileDB from '../fileDB/libFileDB.js';
 
 // -----------------------------------------------------------------
 // NOTE: - - shared-data(web-socket)
+var globalVarShareNodeData = {};
 // var allTasks = [];
 // var todoTasks = [];
 var todoTasks = [
@@ -78,10 +79,19 @@ const modelRunningTask = {
 }
 
 // -----------------------------------------------------------------
+var globalVarTaskRunning = {};
 // NOTE: - - global-var[tasks]
 var runningTasks = [];
 // TODO: no-save duplicate-results
-var oldResult = [];
+// var oldResult = [];
+var oldResult = 
+{
+    // symbol:
+    'SCB':{
+        'resText': '...',
+        'oldStatusSame': false, //if-same =>not-append-toMem
+    }
+};
 // var errTasks = [];
 var sectionTasks_time = 0 + '';
 
@@ -399,6 +409,8 @@ const poolConn = async function ({ conn_i, options, url, key, }) {
             console.log('err::: still-err after-retry many-times.');
             continue;
         }
+
+        // TODO: STOP after(token-EXP)
 
         // TODO: check is_same-res
         const is_same = false;
