@@ -29,9 +29,11 @@ const key = "VarXXX";
 // const url = `https://pokeapi.co/api/v2/pokemon/{(number)}`
 // const url = `https://pokeapi.co/api/v2/pokemon/1`
 const url = `https://wen043.settrade.com/webrealtime/data/fastquote.jsp`
+const url_ALLTASKS = `https://wen043.settrade.com/realtime/fastorder/fastorder.jsp?platform=mm`
 
 export default {
     url,
+    url_ALLTASKS,
     options,
     key,
 }; 
