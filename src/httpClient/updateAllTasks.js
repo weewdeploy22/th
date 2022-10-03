@@ -92,7 +92,7 @@ const oneFetch = async function (someParams) {
         // console.log(hasData);
         const strStart = 'allSeries = [';
         const posStartDetect = hasData.indexOf(strStart);
-        if (posStartDetect) {
+        if (posStartDetect > -1) {
             const pathDir = "../env/";
             const mainFileName = "all.js";
 
@@ -126,7 +126,9 @@ const oneFetch = async function (someParams) {
             // console.log('oldListFullText: ',oldListFullText);
             // ,getOldListData
             const oldListText = getOldList_fromText(oldListFullText, 'ALL_TASKS = [')
+            const oldListJson = JSON.parse(oldListText)
             console.log('oldListText.length: ', oldListText.length);
+            console.log('oldListJson.length: ', oldListJson.length);
             // resultAllSymbols = 
             // ,check-diff
 
