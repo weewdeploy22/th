@@ -1,0 +1,41 @@
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  http://127.0.0.1:8080
+  http://128.199.130.171:8080
+  http://10.15.0.5:8080
+  http://10.104.0.2:8080
+Hit CTRL-C to stop the server
+
+[2023-06-03T01:05:13.736Z]  "GET /" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+(node:663276) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2023-06-03T01:05:14.009Z]  "GET /favicon.ico" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:05:14.010Z]  "GET /favicon.ico" Error (404): "Not found"
+[2023-06-03T01:07:00.027Z]  "GET /" "Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com"
+[2023-06-03T01:09:16.202Z]  "GET /db-bak-2023-04--24-part1.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:09:17.057Z]  "GET /db-bak-2023-04--24-part2.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:14:13.573Z]  "GET http://checkip.amazonaws.com?Z70626419462Q1" "Mozilla/5.0 (Windows NT 6.1; rv:16.0) Gecko/20100101 Firefox/16.0 (+https://best-proxies.ru/faq/#from)"
+[2023-06-03T01:16:31.789Z]  "GET /db-bak-2023-05--01-part1-one.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:16:32.708Z]  "GET /db-bak-2023-05--08-part1.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:16:33.512Z]  "GET /db-bak-2023-05--08-part2.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:24:48.500Z]  "GET /" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.100 Safari/534.30"
+[2023-06-03T01:24:51.056Z]  "GET /db-bak-2023-05--15-part1.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:24:51.651Z]  "GET /db-bak-2023-05--15-part2.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:24:52.487Z]  "GET /db-bak-2023-05--22-part1.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:24:53.241Z]  "GET /db-bak-2023-05--22-part2.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:30:56.005Z]  "GET /db-bak-2023-05--29-part1.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:30:56.794Z]  "GET /db-bak-2023-05--29-part2.zip" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+[2023-06-03T01:52:13.615Z]  "GET /" "Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com"
+^Chttp-server stopped.
+
+x1@ubuntu-s-2vcpu-4gb-amd-sgp1-01:~$ ^C
+x1@ubuntu-s-2vcpu-4gb-amd-sgp1-01:~$ ^C
