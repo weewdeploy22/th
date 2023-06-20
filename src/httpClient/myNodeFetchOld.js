@@ -190,6 +190,7 @@ const refreshTasks_fromTodo_5s = function () {
             const task = localTempTasks[i];
             if (runningTasks.indexOf(task) > -1) {
                 // runningTasks[task] = task;
+                // TODO: log, report-err
                 console.error('cannot-clear: runningTasks [task]:', task);
             } else {
                 runningTasks.push(task);
@@ -246,9 +247,10 @@ const taskUpdating_refreshing = async function (currentTimeSec) {
 
     // TODO: refresh 30s-list
     if (
+        (currentTimeSec % 5) == 0
         // (currentTimeSec % 30) == 29
         // DEBUG: 30s ->1m
-        currentTimeSec == 59
+        // currentTimeSec == 59
         // currentTimeSec == 0 + (60 - 1) ||
         // currentTimeSec == 30
     ) {
