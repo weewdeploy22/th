@@ -1,0 +1,104 @@
+
+wget https://nodejs.org/dist/v18.8.0/node-v18.8.0-linux-x64.tar.xz;
+wget https://nodejs.org/dist/v18.9.0/node-v18.9.0-linux-x64.tar.xz;
+wget https://nodejs.org/dist/v18.9.1/node-v18.9.1-linux-x64.tar.xz;
+wget https://nodejs.org/dist/v18.10.0/node-v18.10.0-linux-x64.tar.xz;
+wget https://nodejs.org/dist/v18.12.0/node-v18.12.0-linux-x64.tar.xz;
+
+wget https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.xz
+wget https://nodejs.org/dist/v18.16.1/node-v18.16.1-linux-x64.tar.xz
+
+--oneline
+sudo apt-get update
+tar -xJf node-v18.16.1-linux-x64.tar.xz && cd ./node-v18.16.1-linux-x64 && sudo rm /usr/bin/node ; sudo rm /usr/bin/npm ; sudo rm /usr/bin/npx ; sudo ln -s `pwd`/bin/node /usr/bin/node && sudo ln -s `pwd`/bin/npm /usr/bin/npm && sudo ln -s `pwd`/bin/npx /usr/bin/npx ; 
+--
+wget https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.xz && tar -xJf node-v18.12.1-linux-x64.tar.xz && cd ./node-v18.12.1-linux-x64 && sudo rm /usr/bin/node ; sudo rm /usr/bin/npm ; sudo rm /usr/bin/npx ; sudo ln -s `pwd`/bin/node /usr/bin/node && sudo ln -s `pwd`/bin/npm /usr/bin/npm && sudo ln -s `pwd`/bin/npx /usr/bin/npx ; 
+--
+--arm-v8
+wget https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-arm64.tar.xz && tar -xJf node-v18.12.1-linux-arm64.tar.xz && cd ./node-v18.12.1-linux-arm64 && sudo rm /usr/bin/node ; sudo rm /usr/bin/npm ; sudo rm /usr/bin/npx ; sudo ln -s `pwd`/bin/node /usr/bin/node && sudo ln -s `pwd`/bin/npm /usr/bin/npm && sudo ln -s `pwd`/bin/npx /usr/bin/npx ; 
+--
+--
+--
+sudo apt-get update
+wget https://nodejs.org/dist/v18.12.0/node-v18.12.0-linux-x64.tar.xz && tar -xJf node-v18.12.0-linux-x64.tar.xz && cd ./node-v18.12.0-linux-x64 && 
+
+sudo rm /usr/bin/node ;
+sudo rm /usr/bin/npm ;
+sudo rm /usr/bin/npx ;
+
+sudo ln -s `pwd`/bin/node /usr/bin/node && sudo ln -s `pwd`/bin/npm /usr/bin/npm && sudo ln -s `pwd`/bin/npx /usr/bin/npx ;
+--
+--
+--
+--
+--
+--
+--
+--
+
+//tar -xJvf nod
+tar -xJf nod
+//cd ./node-v18.8.0-linux-x64/
+cd ./node
+
+--
+sudo apt-get update
+--
+
+sudo ln -s `pwd`/bin/node /usr/bin/node &&
+sudo ln -s `pwd`/bin/npm /usr/bin/npm &&
+sudo ln -s `pwd`/bin/npx /usr/bin/npx ;
+
+--del--old-ln
+sudo rm /usr/bin/node;
+sudo rm /usr/bin/npm;
+sudo rm /usr/bin/npx;
+
+-------------------------
+cd ~ && mkdir src-clone && cd $_ && git clone https://github.com/weewdeploy22/th.git && cd th && npm i -P
+cp src/env/fetchOptions.js.demo src/env/fetchOptions.js
+vi src/env/fetchOptions.js
+set paste
+
+--cimb
+https://wen079.settrade.com/webrealtime/data/fastquote.jsp
+symbol=OR&key=aol3VocYhZte67MZk!gmbw$$
+--kss
+wen054.settrade
+key=msbShbqMsrHhrkb9DkpOug$$
+--
+
+cp src/env/constData.js.demo src/env/constData.js
+
+--
+cd ~/src-clone/th/
+vi src/httpClient/myNodeFetchOld.js
+refresh 30s-list
+
+vi src/env/constData.js
+
+import { ALL_TASKS } from "./1sWatchS50.js"
+import { ALL_TASKS } from "./1sSet50.js"
+--
+node src/bench/bench--login-session.js
+--
+--
+screen -S 2sSet50
+--
+screen -S 2sWatchS50
+screen -r 2sWatchS50
+--
+npm run start
+--
+--
+--
+
+
+-------------------------
+-------------------------
+
+Root Account ID 200027287392 
+Username wwx202209--program-ACP 
+Login Password - 
+SecretId IKIDiHJBdx63oRt9EoCOOBj394mMlyxiFaoo 
+SecretKey pTvHWZR9f02sa5NzOYUEm8GAsOhnTwDG

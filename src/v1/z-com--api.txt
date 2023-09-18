@@ -1,0 +1,23 @@
+-----------------------
+(base) m1dev@m1devs-MacBook-Pro ~ % curl -i -X POST \
+-H "Accept: application/json" \
+-d '{"auth":{"passwordCredentials":{"username":"zthu80612823","password":"1234512345Zz/"},"tenantId":"eebad19a71df4537aadfcf9d208e853d"}}' \
+https://identity.bkk1.cloud.z.com/v2.0/tokens
+HTTP/1.1 200 OK
+Date: Thu, 06 Oct 2022 01:55:29 GMT
+Server: Apache
+Content-Length: 2342
+Content-Type: application/json
+
+{"access":{"token":{"issued_at":"2022-10-06T01:55:30.089558","expires":"2022-10-07T01:55:30Z","id":"dd795157d0eb41ba9d12769fec12a940","tenant":{"id":"eebad19a71df4537aadfcf9d208e853d","enabled":true,"domain_id":"zth","name":"ztht80612823","description":"v2"},"audit_ids":["k4iHnXHyRk-obTwe0tLtjg"]},"serviceCatalog":[{"endpoints":[{"region":"bkk1","publicURL":"https://account.bkk1.cloud.z.com/v1/eebad19a71df4537aadfcf9d208e853d"}],"endpoints_links":[],"type":"account","name":"Account Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://compute.bkk1.cloud.z.com/v2/eebad19a71df4537aadfcf9d208e853d"}],"endpoints_links":[],"type":"compute","name":"Compute Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://networking.bkk1.cloud.z.com"}],"endpoints_links":[],"type":"network","name":"Network Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://block-storage.bkk1.cloud.z.com/v2/eebad19a71df4537aadfcf9d208e853d"}],"endpoints_links":[],"type":"volumev2","name":"Volume Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://image-service.bkk1.cloud.z.com"}],"endpoints_links":[],"type":"image","name":"Image Service"},{"endpoints":[{"region":"bkk1"}],"endpoints_links":[],"type":"emailhosting","name":"Email Hosting Service"},{"endpoints":[{"region":"bkk1"}],"endpoints_links":[],"type":"webhosting","name":"Web Hosting Service"},{"endpoints":[{"region":"bkk1"}],"endpoints_links":[],"type":"domainforwarding","name":"Domain Forwarding Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://dns-service.bkk1.cloud.z.com"}],"endpoints_links":[],"type":"dns","name":"DNS Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://database-hosting.bkk1.cloud.z.com/v1"}],"endpoints_links":[],"type":"databasehosting","name":"Database Hosting Service"},{"endpoints":[{"region":"bkk1","publicURL":"https://identity.bkk1.cloud.z.com/v2.0"}],"endpoints_links":[],"type":"identity","name":"Identity Service"},{"endpoints":[{"region":"bkk1"}],"endpoints_links":[],"type":"wordpresshosting","name":"WordPress Hosting Service"}],"user":{"username":"zthu80612823","roles_links":[],"id":"4aa0616cd4d54c5784315799cf1c2924","roles":[{"name":"SwiftOperator"},{"name":"_member_"}],"name":"zthu80612823"},"metadata":{"is_admin":0,"roles":["ea04ba71916e434c8fdc1b9c327f8dae","e79e6014598348f192a03f8456a084a3"]}}}%                                                         (base) m1dev@m1devs-MacBook-Pro ~ % 
+
+-----------------------
+curl -i -X POST \
+-H "Accept: application/json" \
+-d '{"auth":{"passwordCredentials":{"username":"zthu80612823","password":"1234512345Zz/"},"tenantId":"eebad19a71df4537aadfcf9d208e853d"}}' \
+https://identity.bkk1.cloud.z.com/v2.0/tokens
+-----------------------
+https://cloud.z.com/th/en/cloud/docs/identity-post_tokens.html
+https://cp-th.cloud.z.com/API/
+-----------------------
+-----------------------
